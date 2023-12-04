@@ -1,0 +1,393 @@
+/*
+=================================================
+	Basic text sizing
+=================================================
+	Set your main font size for paragraph
+
+	Reference
+	62.5%  => 10px
+	68.8%  => 11px
+	75%    => 12px
+	81.3%  => 13px
+	87.5%  => 14px
+	100%   => 16px
+	112.5% => 18px
+	125%   => 20px
+
+*/
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-font-color;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/*
+Traditional scale: 6, 7, 8, 9, 10, 11, 12, 14, 16, 18, 21, 24, 36, 48, 60, 72
+	if base is 16:
+	h1 = 48 pixels → 48 ÷ 16 = 3 em
+	h2 = 36 pixels → 36 ÷ 16 = 2.25 em
+	h3 = 24 pixels → 24 ÷ 16 = 1.5 em
+	h4 = 21 pixels → 21 ÷ 16 = 1.3125 em
+	h5 = 18 pixels → 18 ÷ 16 = 1.125 em
+	h6 = 16 pixels → 16 ÷ 16 = 1 em
+*/
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: inherit;
+}
+
+/* OLD VERSION 
+h1, h2, h3, h4, h5, h6 { margin-bottom: .5em; }
+h1 { font-size: 3em; line-height: 1.15em; }
+h2 { font-size: 2.25em; line-height: 1.2em; }
+h3 { font-size: 1.5em; line-height: 1.25em; }
+h4 { font-size: 1.3125em; line-height: 1.3em; }
+h5 { font-size: 1.125em; line-height: 1.35em; }
+h6 { font-size: 1em; line-height: 1.4em; }
+*/
+
+/* NEW BASELINE VERSION 
+h1 { font-size: 3em; line-height: 1em; margin-bottom: .47em; padding-top: .03em; }
+h2 { font-size: 2.25em; line-height: 1.3334em; margin-bottom: .51em; padding-top: .15em; }
+h3 { font-size: 1.5em; line-height: 1em; margin-bottom: 1.1em; margin-top: -.1em; }
+h4 { font-size: 1.3125em; line-height: 1.1429em; margin-bottom: 1.2429em; margin-top: -.1em; }
+h5 { font-size: 1.125em; line-height: 1.3334em; margin-bottom: 1.3334em; }
+h6 { font-size: 1em; line-height: 1.5em; margin-bottom: 0; }
+*/
+
+/* SIMPLE VERSION */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 3em; /* 48px / 16px = 3em */
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 2.25em; /* 36px / 16px = 2.25em */
+  line-height: 1.1em;
+}
+
+h3 {
+  font-size: 1.5em; /* 24px / 16px = 1.5em */
+  line-height: 1.2em;
+}
+
+h4 {
+  font-size: 1.3125em; /* 21px / 16px = 1.3125em */
+  line-height: 1.3em;
+}
+
+h5 {
+  font-size: 1.125em; /* 18px / 16px = 1.125em */
+  line-height: 1.4em;
+}
+
+h6 {
+  font-size: 1em; /* 16px / 16px = 1em */
+  line-height: 1.5em;
+}
+
+/* #Paragraphs 
+================================================== */
+p {
+  margin-bottom: 1.5em;
+}
+/*
+p+p {
+  text-indent: 1em;
+  margin-top: -1.25em;
+}*/
+
+/* #Links
+================================================== */
+a {
+  color: $color-links;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: $color-linksdark;
+}
+p a,
+p a:visited {
+  line-height: inherit;
+}
+
+/* #Lists
+================================================== */
+ul,
+ol {
+  margin: 0 0 1.5em 0;
+  clear: both;
+}
+
+li {
+  clear: both;
+  margin: 0 0 0 1.875em;
+}
+
+ul li ul,
+ul li ol,
+ol li ol,
+ol li ul {
+  margin: 0;
+}
+
+ul li ul li,
+ol li ol li,
+ol li ul li,
+ul li ol li {
+  margin: 0 0 0px 1.875em;
+}
+
+/* #Icons
+================================================== */
+
+ul.icons {
+  list-style: none;
+  margin: 0 0 1.25em 0.35em;
+}
+
+ul.icons li {
+  margin: 0 0 0 0;
+}
+
+ul.icons li a i {
+  color: $base-font-color;
+}
+
+/* #Block Quotes
+================================================== */
+blockquote {
+  position: relative;
+  margin: 1em 0;
+  padding: 1.5em;
+  color: $color-grey60;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+blockquote.quotes {
+  padding: 1.5em 4em 1em 4em;
+}
+
+blockquote.quotes:before {
+  display: block;
+  content: "\201C";
+  font-size: 4em;
+  position: absolute;
+  top: 0.6em;
+  left: 0.3em;
+  color: $color-grey15;
+}
+
+blockquote.quotes:after {
+  display: block;
+  content: "\201D";
+  font-size: 4em;
+  position: absolute;
+  bottom: 0.4em;
+  right: 0.3em;
+  color: $color-grey15;
+}
+
+blockquote cite {
+  color: $color-grey40;
+  font-size: 0.85em;
+  display: block;
+  text-align: right;
+}
+
+blockquote cite:before {
+  content: "\2014 \2009";
+}
+
+blockquote.left {
+  width: 23%;
+  float: left;
+  margin: 0 1em 0.5em 0;
+  border-right: 1px solid $color-grey20;
+  text-align: right;
+}
+
+blockquote.right {
+  width: 23%;
+  float: right;
+  margin: 0 0 0.5em 1em;
+  border-left: 1px solid $color-grey20;
+}
+
+/* @FONT-FACE */
+
+@font-face {
+  font-family: "MuseoSlab500";
+  src: url("../fonts/Museo/museo_slab_500-webfont.eot");
+  src: url("../fonts/Museo/museo_slab_500-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Museo/museo_slab_500-webfont.woff") format("woff"),
+    url("../fonts/Museo/museo_slab_500-webfont.ttf") format("truetype"),
+    url("../fonts/Museo/museo_slab_500-webfont.svg#montserratbold")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Museo300";
+  src: url("../fonts/Museo/museo300-regular-webfont.eot");
+  src: url("../fonts/Museo/museo300-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Museo/museo300-regular-webfont.woff") format("woff"),
+    url("../fonts/Museo/museo300-regular-webfont.ttf") format("truetype"),
+    url("../fonts/Museo/museo300-regular-webfont.svg#montserratbold")
+      format("svg");
+}
+
+/* A font by Jos Buivenga (exljbris) -> http://www.exljbris.com */
+@font-face {
+  font-family: "MuseoSans500";
+  src: url("../fonts/Museo/MuseoSans_500-webfont.eot");
+  src: url("../fonts/Museo/MuseoSans_500-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Museo/MuseoSans_500-webfont.woff") format("woff"),
+    url("../fonts/Museo/MuseoSans_500-webfont.ttf") format("truetype"),
+    url("../fonts/Museo/MuseoSans_500-webfont.svg#montserratbold") format("svg");
+}
+
+/* */
+@font-face {
+  font-family: "montserratbold";
+  src: url("../fonts/Montserrat/montserrat-bold-webfont.eot");
+  src: url("../fonts/Montserrat/montserrat-bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Montserrat/montserrat-bold-webfont.woff") format("woff"),
+    url("../fonts/Montserrat/montserrat-bold-webfont.ttf") format("truetype"),
+    url("../fonts/Montserrat/montserrat-bold-webfont.svg#montserratbold")
+      format("svg");
+}
+
+/* */
+@font-face {
+  font-family: "nevis";
+  src: url("../fonts/Nevis/nevis-webfont.eot");
+  src: url("../fonts/Nevis/nevis-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Nevis/nevis-webfont.woff") format("woff"),
+    url("../fonts/Nevis/nevis-webfont.ttf") format("truetype"),
+    url("../fonts/Nevis/nevis-webfont.svg#montserratbold") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../fonts/OpenSans/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/OpenSans/OpenSans-Regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/OpenSans/OpenSans-Regular-webfont.woff") format("woff"),
+    url("../fonts/OpenSans/OpenSans-Regular-webfont.ttf") format("truetype"),
+    url("../fonts/OpenSans/OpenSans-Regular-webfont.svg#OpenSansLight")
+      format("svg");
+}
+
+@font-face {
+  font-family: "OpenSansLight";
+  src: url("../fonts/OpenSans/OpenSans-Light-webfont.eot");
+  src: url("../fonts/OpenSans/OpenSans-Light-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/OpenSans/OpenSans-Light-webfont.woff") format("woff"),
+    url("../fonts/OpenSans/OpenSans-Light-webfont.ttf") format("truetype"),
+    url("../fonts/OpenSans/OpenSans-Light-webfont.svg#OpenSansLight")
+      format("svg");
+}
+
+@font-face {
+  font-family: "OpenSansExtraBold";
+  src: url("../fonts/OpenSans/OpenSans-ExtraBold-webfont.eot");
+  src: url("../fonts/OpenSans/OpenSans-ExtraBold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/OpenSans/OpenSans-ExtraBold-webfont.woff") format("woff"),
+    url("../fonts/OpenSans/OpenSans-ExtraBold-webfont.ttf") format("truetype"),
+    url("../fonts/OpenSans/OpenSans-ExtraBold-webfont.svg#OpenSansLight")
+      format("svg");
+}
+
+@font-face {
+  font-family: "ChunkFiveRegular";
+  src: url("../../framework/fonts/Chunkfive-webfont.eot");
+  src: url("../../framework/fonts/Chunkfive-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../framework/fonts/Chunkfive-webfont.woff") format("woff"),
+    url("../../framework/fonts/Chunkfive-webfont.ttf") format("truetype"),
+    url("../../framework/fonts/Chunkfive-webfont.svg#ChunkFiveRegular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PacificoRegular";
+  src: url("../fonts/Pacifico/Pacifico-webfont.eot");
+  src: url("../fonts/Pacifico/Pacifico-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Pacifico/Pacifico-webfont.woff") format("woff"),
+    url("../fonts/Pacifico/Pacifico-webfont.ttf") format("truetype"),
+    url("../fonts/Pacifico/Pacifico-webfont.svg#PacificoRegular") format("svg");
+}
+
+@font-face {
+  font-family: "HoneyScriptLight";
+  src: url("../fonts/HoneyScript/honeyscript-light-webfont.eot");
+  src: url("../fonts/HoneyScript/honeyscript-light-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/HoneyScript/honeyscript-light-webfont.woff") format("woff"),
+    url("../fonts/HoneyScript/honeyscript-light-webfont.ttf") format("truetype"),
+    url("../fonts/HoneyScript/honeyscript-light-webfont.svg#HoneyScriptLight")
+      format("svg");
+}
+
+@font-face {
+  font-family: "BebasRegular";
+  src: url("../fonts/Bebas/BEBAS___-webfont.eot");
+  src: url("../fonts/Bebas/BEBAS___-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Bebas/BEBAS___-webfont.woff") format("woff"),
+    url("../fonts/Bebas/BEBAS___-webfont.ttf") format("truetype"),
+    url("../fonts/Bebas/BEBAS___-webfont.svg#BebasRegular") format("svg");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../fonts/BebasNeue/BebasNeue-webfont.eot");
+  src: url("../fonts/BebasNeue/BebasNeue-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/BebasNeue/BebasNeue-webfont.woff") format("woff"),
+    url("../fonts/BebasNeue/BebasNeue-webfont.ttf") format("truetype"),
+    url("../fonts/BebasNeue/BebasNeue-webfont.svg#BebasRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "VarelaRegular";
+  src: url("../fonts/Varela/varela-regular-webfont.eot");
+  src: url("../fonts/Varela/varela-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Varela/varela-regular-webfont.woff") format("woff"),
+    url("../fonts/Varela/varela-regular-webfont.ttf") format("truetype"),
+    url("../fonts/Varela/varela-regular-webfont.svg#varelaregular")
+      format("svg");
+}

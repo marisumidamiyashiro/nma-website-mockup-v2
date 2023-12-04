@@ -1,0 +1,15 @@
+/* BACKGROUND-EXTENDED
+Enable backgrounds to go wide without horizontal scrollbars 
+===================================== */
+html, body {
+    overflow-x: hidden;
+}
+
+.extended { position: relative; }
+.extended:before, .extended:after { content: ""; position: absolute; top: 0; bottom: 0; width: 9999px;   /* some huge width */ } 
+.extended:before { right: 100%; }
+.extended:after { left: 100%; }
+
+.extended.yellow, 
+.extended.yellow:before, 
+.extended.yellow:after{ background: yellow;}

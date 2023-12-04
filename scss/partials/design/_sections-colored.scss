@@ -1,0 +1,13 @@
+/* #AUTO COLORED SECTIONS */
+
+.colored {
+    background: $color-grey10;
+}
+
+.colored:nth-child(odd) {
+    background: $color-grey5;
+}
+
+.colored:last-of-type {
+    background: $color-background;
+}

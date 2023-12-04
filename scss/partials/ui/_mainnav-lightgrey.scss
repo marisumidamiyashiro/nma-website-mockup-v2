@@ -1,0 +1,106 @@
+nav.mainnav {
+	font-family: Helvetica, Arial, sans-serif;
+   	overflow:hidden;
+   	position:relative;
+	background: #f9f9f9;
+	background: -moz-linear-gradient(top,  #f9f9f9 0%, #efefef 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(100%,#efefef));
+	background: -webkit-linear-gradient(top,  #f9f9f9 0%,#efefef 100%);
+	background: -o-linear-gradient(top,  #f9f9f9 0%,#efefef 100%);
+	background: -ms-linear-gradient(top,  #f9f9f9 0%,#efefef 100%);
+	background: linear-gradient(to bottom,  #f9f9f9 0%,#efefef 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#efefef',GradientType=0 );
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin: 0 10px;
+}
+nav.mainnav ul {
+	clear:left;
+	float:left;
+	list-style:none;
+	position:relative;
+	left:50%;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+nav.mainnav ul li {
+	clear: none;
+	display: block;
+	float: left;
+	list-style: none;
+	position: relative;
+	right: 50%;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+nav.mainnav ul li a {
+	display: block;
+	color: #666;
+	text-decoration:none;
+	line-height:1.3em;
+	padding: 1em 3em 1.3em 3em;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #ddd;
+	/* text-shadow: h-shadow v-shadow blur color;*/
+	text-shadow: 1px 1px 0px #fff;
+}
+nav.mainnav ul li:first-child a {
+	border-left: none;
+}
+nav.mainnav ul li:last-child a {
+	border-right: none;
+}
+
+nav.mainnav ul li a:hover, nav.mainnav ul li a.active,
+nav.mainnav ul li a.active:hover {
+   color:#39c;
+   background:#efefef;
+}
+
+nav.mainnav ul li a small {
+	display: block;
+	text-transform: capitalize;
+	font-size: .625em;
+	line-height: .625em;
+	color: #999;
+}
+
+/* MEDIA QUERIES
+===================================== */
+@media only screen and (max-width: 767px) {
+	
+	nav.mainnav {
+		padding: 0; /*to match the grid padding */
+		margin: 0;
+	}
+	
+	nav.mainnav ul {
+		clear:both;
+		float:none;
+		position:static;
+		right: auto;
+	}
+	nav.mainnav ul li {
+		clear:both;
+		float:none;
+		position:static;
+		left: auto;
+	}
+	nav.mainnav ul li a {
+		border: none;
+		text-shadow:none;
+	}
+	nav.mainnav ul li a:hover {
+		color: #39c;
+	}
+	nav.mainnav ul li a {
+		border-top: 1px solid #ddd;
+	}
+	nav.mainnav ul li a small {
+		clear: both;
+	}
+		
+}

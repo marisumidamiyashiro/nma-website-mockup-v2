@@ -1,0 +1,56 @@
+/* #Buttons
+================================================== */
+
+button {
+    font-size: inherit;
+}
+
+button, a.button {
+	display: inline-block;
+	background-color: $color-grey20;
+	color: $color-grey80;
+	padding: .75em 1em;
+	-webkit-border-radius: .32em;
+	-moz-border-radius: .32em;
+	border-radius: .32em;
+	margin-bottom: .5em;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1em;
+}
+
+button:hover, a.button:hover {
+	background-color: $color-links;
+	color: $color-white;
+}
+
+button i, a.button i {
+	color: $color-grey80;
+}
+
+button:hover i, a.button:hover i {
+	color: $color-white;
+}
+
+button.reverse,
+a.button.reverse {
+	background: rgba(255,255,255,0);
+    border: 1px solid $color-white;
+	color: $color-white;
+}
+
+button.reverse:hover,
+a.button.reverse:hover {
+	background-color: rgba(255,255,255,1);
+    border: 1px solid rgba(255,255,255,0);
+	color:  rgba(0,0,0,1);
+    text-shadow: none;
+}
+
+button.small, a.button.small {
+	padding: .5em .65em;
+    font-size: 70%;
+}

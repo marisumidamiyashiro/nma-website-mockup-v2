@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.container {
+	width: 98%;
+	padding: 0 1%;
+	margin: 0 auto;
+	clear: both;
+}
+	
+.row {
+	margin: 0;	
+	clear: both;
+}
+
+.column { 
+	margin: 1% 0;
+	width: 100%; 
+}
+
+
+/*splits */
+.column.split {
+	float: left;
+	width: 49.5%; 
+	margin: 0 0 1% 0;
+}
+
+.column.split:nth-child(odd) {  margin: 0 1% 1% 0;}
+
+
+
+/* Medium */
+@media (min-width: 47em)  {
+	
+	/* FLUID w/ columns */
+	
+	.column {
+		float: left;
+		margin: 0 0 0 2%;	/* This is the gutter */
+	}
+
+	.column:first-child {
+		margin: 0;	
+	}
+	
+	/* Centered */
+	.centered.column, .centered.column:first-child {
+		float: none;
+		margin: 0 auto;
+	}
+
+	.row {
+		margin: 2% 0;	
+	}
+	
+	/*  % = (100 - #gutters) / #columns */
+	.one.column, 
+	.one-whole.column 			{ width: 100%; }
+	.one-half.column,
+	.one-half.column.split 	{ width: 49%; } /* 100% - 1 gutter = 98% / 2 columns = 49% */
+	.one-third.column 			{ width: 32%; } /* 100% - 2 gutters = 96% / 3 columns = 32% */
+	.two-thirds.column 		{ width: 66%; } /* (32 * 2) + (1 * 2) = 66% */
+	.one-fourth.column,
+	.one-fourth.column.split 	{ width: 23.5%; } /* 100% - 3 gutters = 94% / 4 columns = 23.5% */
+	.three-fourths.column 		{ width: 74.5%; } /* (23.5 * 3) + (2 * 2) = 66% */
+	.one-fifth.column,
+	.one-fifth.column.split 	{ width: 18.4%; } /* 100% - 4 gutters = 92% / 5 columns = 18.4% */
+	.two-fifths.column 		{ width: 38.8%; } /* (18.4 * 2) + (1 * 2) = 38.8% */
+	.three-fifths.column 		{ width: 59.2%; } /* (18.4 * 3) + (2 * 2) = 59.2% */
+	.four-fifths.column 		{ width: 79.6%; } /* (18.4 * 4) + (3 * 2) = 79.6% */
+	.one-sixth.column 			{ width: 15%; } /* 100% - 5 gutters = 90% / 6 columns = 15% */
+	.one-seventh.column 		{ width: 12.5714%; } /* 100% - 6 gutters = 88% / 7 columns = 12.5714% */
+	.one-eighth.column,
+	.one-eighth.column.split 	{ width: 10.75%; } /* 100% - 7 gutters = 86% / 8 columns = 10.75% */
+	.three-eighths.column 		{ width: 36.25%; } /* (10.75 * 3) + (2 * 2) = 36.25% */
+	
+	/* 12 col grid */
+	.one-twelth.column			{ width: 6.5%; } /* 100% - 11 gutters = 78% / 12 columns = 6.5% */
+	.two-twelths.column 		{ width: 15%; } /* (6.5 * 2) + (1 * 2) = */
+	.three-twelths.column 		{ width: 23.5%; } /* (6.5 * 3) + (2 * 2) = */
+	.four-twelths.column 		{ width: 32%; } /* (6.5 * 4) + (3 * 2) = */
+	.five-twelths.column 		{ width: 40.5%; } /* (6.5 * 5) + (4 * 2) = */
+	.six-twelths.column 		{ width: 49%; } /* (6.5 * 6) + (5 * 2) = */
+	.seven-twelths.column 		{ width: 57.5%; } /* (6.5 * 7) + (6 * 2) = */
+	.eight-twelths.column 		{ width: 66%; } /* (6.5 * 8) + (7 * 2) = */
+	.nine-twelths.column 		{ width: 74.5%; } /* (6.5 * 9) + (8 * 2) = */
+	.ten-twelths.column 		{ width: 83%; } /* (6.5 * 10) + (9 * 2) = */	
+	.eleven-twelths.column 	{ width: 91.5%; } /* (6.5 * 11) + (10 * 2) = */	
+	.twelve-twelths.column 	{ width: 100%; } 
+	
+	/* Offsets */	
+	/* width of columns + gutter */
+	
+	.offset-by-one-half							{ margin: 0 0 0 53%; }
+	.offset-by-one-half.column:first-child		{ margin: 0 0 0 51%; }
+	.offset-by-one-third							{ margin: 0 0 0 36%; }
+	.offset-by-one-third.column:first-child		{ margin: 0 0 0 34%; }
+	.offset-by-two-thirds							{ margin: 0 0 0 70%; }
+	.offset-by-two-thirds.column:first-child		{ margin: 0 0 0 68%; }
+	.offset-by-one-fourth							{ margin: 0 0 0 27.5%; }
+	.offset-by-one-fourth.column:first-child		{ margin: 0 0 0 25.5%; }
+	.offset-by-three-fourths						{ margin: 0 0 0 78.5%; }
+	.offset-by-three-fourths.column:first-child	{ margin: 0 0 0 76.5%; }
+	.offset-by-one-fifth							{ margin: 0 0 0 22.4%; }
+	.offset-by-one-fifth.column:first-child		{ margin: 0 0 0 20.4%; }
+	
+	.offset-by-one-eigth							{ margin: 0 0 0 14.75%; }
+	.offset-by-one-eigth.column:first-child		{ margin: 0 0 0 12.75%; }
+	
+	.offset-by-one-twelth							{ margin: 0 0 0 10.5%; }
+	.offset-by-one-twelth.column:first-child		{ margin: 0 0 0 8.5%; }
+	.offset-by-two-twelths 						{ margin: 0 0 0 19%; }
+	.offset-by-two-twelths.column:first-child 	{ margin: 0 0 0 17%; }
+	.offset-by-three-twelths						{ margin: 0 0 0 27.5%; }
+	.offset-by-three-twelths.column:first-child	{ margin: 0 0 0 25.5%; }
+	.offset-by-four-twelths						{ margin: 0 0 0 36%; }
+	.offset-by-four-twelths.column:first-child	{ margin: 0 0 0 34%; }
+	.offset-by-five-twelths						{ margin: 0 0 0 44.5%; }
+	.offset-by-five-twelths.column:first-child	{ margin: 0 0 0 42.5%; }
+	.offset-by-six-twelths							{ margin: 0 0 0 53%; }
+	.offset-by-six-twelths.column:first-child		{ margin: 0 0 0 51%; }
+	.offset-by-seven-twelths						{ margin: 0 0 0 61.5%; }
+	.offset-by-seven-twelths.column:first-child	{ margin: 0 0 0 59.5%; }
+	.offset-by-eight-twelths						{ margin: 0 0 0 70%; }
+	.offset-by-eight-twelths.column:first-child	{ margin: 0 0 0 68%; }
+	.offset-by-nine-twelths						{ margin: 0 0 0 78.5%; }
+	.offset-by-nine-twelths.column:first-child	{ margin: 0 0 0 76.5%; }
+	.offset-by-ten-twelths 						{ margin: 0 0 0 87%; }
+	.offset-by-ten-twelths.column:first-child		{ margin: 0 0 0 85%; }
+	.offset-by-eleven-twelths,
+	.offset-by-eleven-twelths.column:first-child	{ margin: 0 0 0 93.5%; }
+	
+	.column.split,
+	.column.split:nth-child(odd) { margin: 0 0 0 2%; }
+	
+	.column.split:first-child { margin: 0; }
+
+	.one-third.column.split.list:nth-child(3n+4) { margin: 0;}
+	.one-fourth.column.split.list:nth-child(4n+5) {
+		margin: 0;
+		//background: red;
+	}
+	
+	/* #CLEARFIX
+	================================================== */
+	/*From Chris Coyier CSS Tricks
+	http://css-tricks.com/snippets/css/clear-fix/ */
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+}
+
+/* Large */
+@media (min-width: 75em) {
+	/* FLUID w/o columns (stacked) */
+	.container { width: 1200px; padding: 0; } /* FIXED WIDTH */
+	
+}

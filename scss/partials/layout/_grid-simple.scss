@@ -1,0 +1,64 @@
+/* SIMPLE GRID */
+
+.row {
+	margin: 0;
+}
+		
+.column {
+    display: block;
+    float: none;
+    margin: 0 0 3em 0;
+}
+
+.one-half.column,
+.one-third.column,
+.two-thirds.column,
+.one-fourth.column {	width: 100%; }
+
+.column.split {	
+    float: left; 
+    width: 48%; 
+    margin: 0 1% 3em 0; 
+}
+
+.column.centered {
+    width: 100%;
+    margin: 0 auto 3em 0;
+}
+
+.demo .column  {
+    padding: 1.5em 0;
+    background: rgba(0,0,0,.1);
+}
+.demo .column p:last-child {
+    margin-bottom: 0;
+}
+    
+
+
+/* Medium and Larger */
+@media (min-width: 768px) {
+
+    .column {
+        float: left;
+        margin-right: 8%;
+        //margin-bottom: 1.5em;
+    }
+
+    .column.centered,
+    .column.centered:last-child {
+        float: none;
+        margin: 0 auto 3em auto;
+    }
+
+    .column:last-child {
+        margin-right: 0;
+    }
+
+    .one-whole.column {	width: 100%; margin: 0 0 3em 0; }
+    .one-half.column {	width: 46%; }
+    .one-third.column {	width: 28%; }
+    .two-thirds.column {	width: 64%; }
+    .one-fourth.column {	width: 19%; }
+    
+}

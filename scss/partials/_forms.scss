@@ -1,0 +1,49 @@
+/* #FORMS
+================================================== */
+
+form {
+    text-align: left;
+}
+
+input[type="email"],
+input[type="search"],
+input[type="text"],
+textarea {
+    font-size: .9em;
+    height: 3em;
+    padding: .5em .75em; 
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+    min-width: 100%;
+}
+
+textarea {
+    min-height: 10em;
+    max-width: 100%;
+    padding-top: .75em;
+    padding-bottom: .75em; 
+}
+
+input[type="email"]:focus,
+input[type="search"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+    outline: 0; 
+}
+
+label {
+    display: block;
+    margin: .5em 0;
+}
+
+input + label {
+    margin-top: 1em;
+}

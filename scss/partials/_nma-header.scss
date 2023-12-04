@@ -1,0 +1,120 @@
+.kccnma-logo-header {
+    display: flex;
+    align-items: center;
+
+    h1 {
+        margin: 0;
+        font-family: $font-title;
+        color: #333;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.5em;
+    }
+}
+
+/* HEADER */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+/* SITE-NAV */
+.nma-site-nav {
+    display: flex;
+    position: relative;
+
+    .menu-button {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        z-index: 20;
+        cursor: pointer;
+        fill: $color-link-darker;
+        border: none;
+        background-color: transparent;
+    }
+
+    &[data-navstate="closed"] {
+
+        .navicon-top-one {
+            animation: separated-top-one-close .3s linear 0s forwards;
+            transform-origin: left top;
+        }
+
+        .navicon-top-two {
+            animation: separated-top-two-close .3s linear 0s forwards;
+            transform-origin: right top;
+        }
+
+        .navicon-middle-one {
+            animation: separated-middle-one-close .5s forwards;
+        }
+
+        .navicon-middle-two {
+            animation: separated-middle-two-close .5s forwards;
+        }
+
+        .navicon-bottom-one {
+            animation: separated-bottom-one-close .3s linear 0s forwards;
+            transform-origin: right top;
+        }
+
+        .navicon-bottom-two {
+            animation: separated-bottom-two-close .3s linear 0s forwards;
+            transform-origin: left top;
+        }
+
+    }
+
+    &[data-navstate="open"] {
+        .menu-button {
+            position: fixed;
+            top: 3em;
+            right: 1.5em;
+            z-index: 25;
+            fill: #fff;
+            stroke: #fff;
+
+            .navicon-top-one {
+                animation: separated-top-one-open .3s linear 0s forwards;
+                transform-origin: left top;
+            }
+
+            .navicon-top-two {
+                animation: separated-top-two-open .3s linear 0s forwards;
+                transform-origin: right top;
+            }
+
+            .navicon-middle-one {
+                animation: separated-middle-one-open .3s forwards;
+            }
+
+            .navicon-middle-two {
+                animation: separated-middle-two-open .3s forwards;
+            }
+
+            .navicon-bottom-one {
+                animation: separated-bottom-one-open .3s linear 0s forwards;
+                transform-origin: right top;
+            }
+
+            .navicon-bottom-two {
+                animation: separated-bottom-two-open .3s linear 0s forwards;
+                transform-origin: left top;
+            }
+        }
+
+        ul {
+            background-color: #069;
+            transform: translate(0, 0);
+        }
+    }
+}
+
+/* HIDE VISUALLY */
+.hide-visually {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}

@@ -1,0 +1,40 @@
+// Modules
+@import "modules/colors";
+
+// Base Font
+//$base-font-family: Georgia, Times, "Times New Roman", serif;
+$base-font-family: "OpenSansRegular", Helvetica, Arial, sans-serif;
+$base-font-size: 100%;
+$base-font-weight: normal;
+$base-line-height: 1.5;
+$color-main: $color-grey80;
+$color-darker: $color-grey80;
+$color-lighter: $color-grey60;
+$base-font-color: $color-main;
+$color-accent: #000;
+$color-kccblue: #2754a5;
+$color-links: #069;
+$color-linksdark: #034160;
+
+$font-title: "OpenSansRegular", Helvetica, Arial, sans-serif;
+
+$color-text-body: rgba(0, 0, 0, .8);
+$color-link: rgba(0, 102, 153, .8);
+$color-link-darker: rgba(0, 102, 153, 1);
+$color-accent: rgba(255, 153, 0, 1);
+
+// Partials
+@import "partials/reset";
+@import "partials/html5";
+@import "partials/media";
+@import "partials/clearfix";
+@import "partials/buttons";
+@import "partials/typography-simple";
+@import "partials/nma-header";
+@import "partials/nma-overlaynav";
+@import "partials/nma-logos";
+@import "partials/nma-keyframes";
+
+// Layout
+@import "partials/layout/grid-simple";
+@import "partials/layout/grid-image";

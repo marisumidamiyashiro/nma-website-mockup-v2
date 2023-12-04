@@ -1,0 +1,104 @@
+nav.dark {
+	font-family: Helvetica, Arial, sans-serif;
+   	overflow:hidden;
+   	position:relative;
+	background: #333333;
+	background: -moz-linear-gradient(top,  #333333 0%, #000000 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#333333), color-stop(100%,#000000));
+	background: -webkit-linear-gradient(top,  #333333 0%,#000000 100%);
+	background: -o-linear-gradient(top,  #333333 0%,#000000 100%);
+	background: -ms-linear-gradient(top,  #333333 0%,#000000 100%);
+	background: linear-gradient(to bottom,  #333333 0%,#000000 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#000000',GradientType=0 );
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin: 0 10px;
+}
+nav.dark ul {
+	clear:left;
+	float:left;
+	list-style:none;
+	position:relative;
+	left:50%;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+nav.dark ul li {
+	clear: none;
+	display: block;
+	float: left;
+	list-style: none;
+	position: relative;
+	right: 50%;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+nav.dark ul li a {
+	display: block;
+	color: #fff;
+	text-decoration:none;
+	font-size: 1em;
+	line-height: 1.3em;
+	padding: 1em 3em 1.3em 3em;
+	border-left: 1px solid #111;
+	border-right: 1px solid #333;
+}
+nav.dark ul li:first-child a {
+	border-left: none;
+}
+nav.dark ul li:last-child a {
+	border-right: none;
+}
+nav.dark ul li a:hover, nav.dark ul li a.active,
+nav.dark ul li a.active:hover {
+   color:#fff;
+   background:#000;
+}
+
+nav.dark ul li a small{
+	display: block;
+	text-transform: capitalize;
+	font-size: .625em;
+	line-height: .625em;
+	color: #ccc;
+}
+
+/* MEDIA QUERIES
+===================================== */
+@media only screen and (max-width: 767px) {
+	
+	nav.dark {
+		padding: 0; /*to match the grid padding */
+		margin: 0;
+	}
+	
+	nav.dark ul {
+		clear:both;
+		float:none;
+		position:static;
+		right: auto;
+	}
+	nav.dark ul li {
+		clear:both;
+		float:none;
+		position:static;
+		left: auto;
+	}
+	nav.dark ul li a {
+		border: none;
+		text-shadow:none;
+	}
+	nav.dark ul li a:hover {
+		color: #39c;
+	}
+	nav.dark ul li a {
+		border-top: 1px solid #333;
+	}
+	nav.dark ul li a small {
+		clear: both;
+	}
+		
+}

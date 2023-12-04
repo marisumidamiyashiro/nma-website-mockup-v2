@@ -1,0 +1,28 @@
+# Logs
+logs
+*.log
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# MAC General
+.DS_Store
+*.icloud
+
+# Prepros Config files
+prepros-6.config
+prepros.cfg
+*prepros*.*
+prepros.config
+
+# Project files
+auth.js
+my_uploads.*
+youtube.html
+
+# Other
+.htaccess
+

@@ -1,0 +1,455 @@
+/*
+=================================================
+	Basic text sizing
+=================================================
+	Set your main font size for paragraph
+
+	Reference
+	62.5%  => 10px
+	68.8%  => 11px
+	75%    => 12px
+	81.3%  => 13px
+	87.5%  => 14px
+	100%   => 16px
+	112.5% => 18px
+	125%   => 20px
+
+*/
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-font-color;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*
+Traditional scale: 6, 7, 8, 9, 10, 11, 12, 14, 16, 18, 21, 24, 36, 48, 60, 72
+	if base is 16:
+	h1 = 48 pixels → 48 ÷ 16 = 3 em
+	h2 = 36 pixels → 36 ÷ 16 = 2.25 em
+	h3 = 24 pixels → 24 ÷ 16 = 1.5 em
+	h4 = 21 pixels → 21 ÷ 16 = 1.3125 em
+	h5 = 18 pixels → 18 ÷ 16 = 1.125 em
+	h6 = 16 pixels → 16 ÷ 16 = 1 em
+*/
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: inherit;
+}
+
+/* BASELINE VERSION */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 1em;
+  font-size: 3em; /* 48px / 16px = 3em */
+  line-height: 1em;
+  margin-bottom: 0.5em;
+
+  &.baseline-shift,
+  &.baseline-shift:last-child {
+    margin-top: -1em;
+    position: relative;
+    top: 0.5em;
+    margin-bottom: 1.5em;
+  }
+}
+
+h2 {
+  margin-top: 0.333333333333334em;
+  padding-top: 0.16666666666667em;
+  font-size: 2.25em; /* 36px / 16px = 2.25em */
+  line-height: 1.333333333333334em;
+  //padding-bottom: 0.66666666666667em;
+  //margin-bottom: .36666666666667em;
+  //margin-bottom: -0.16666666666667em;
+  margin-bottom: 0.5em;
+
+  &.baseline-shift,
+  &.baseline-shift:last-child {
+    margin-top: 0;
+    padding-top: 0.16666666666667em;
+    font-size: 2.25em; /* 36px / 16px = 2.25em */
+    line-height: 1.333333333333334em;
+    padding-bottom: 0.66666666666667em;
+    //margin-bottom: .36666666666667em;
+    margin-bottom: -1.5em;
+    position: relative;
+    top: -0.66666666666667em;
+  }
+}
+
+h1 + h2 {
+  padding-top: 0.00666666666667em;
+  padding-bottom: 0.16em;
+}
+
+h3 {
+  margin-top: 0;
+  //padding-top: 1em;
+  font-size: 1.5em; /* 24px / 16px = 1.5em */
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+
+h4 {
+  margin-top: 0;
+  //padding-top: 1.14285714285714em;
+  font-size: 1.3125em; /* 21px / 16px = 1.3125em */
+  line-height: 1.14285714285714em;
+  margin-bottom: 1.14285714285714em;
+}
+
+h5 {
+  margin-top: 0;
+  //padding-top: 1.333333333333334em;
+  font-size: 1.125em; /* 18px / 16px = 1.125em */
+  line-height: 1.333333333333334em;
+  margin-bottom: 1.333333333333334em;
+}
+
+h6 {
+  margin-top: 0;
+  //padding-top: 1.5em;
+  font-size: 1em; /* 16px / 16px = 1em */
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* #Paragraphs 
+================================================== */
+p {
+  margin-bottom: 1.5em;
+}
+/*
+p+p {
+  text-indent: 1em;
+  margin-top: -1.25em;
+}*/
+
+.text-center {
+  text-align: center;
+}
+
+/* #Links
+================================================== */
+a,
+a:visited {
+  color: $color-links;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: $color-linksdark;
+}
+p a,
+p a:visited {
+  line-height: inherit;
+}
+
+/* #Lists
+================================================== */
+ul,
+ol {
+  margin: 0 0 1.5em 0;
+  clear: both;
+}
+
+li {
+  clear: both;
+  margin: 0 0 0 1.875em;
+}
+
+ul li ul,
+ul li ol,
+ol li ol,
+ol li ul {
+  margin: 0;
+}
+
+ul li ul li,
+ol li ol li,
+ol li ul li,
+ul li ol li {
+  margin: 0 0 0px 1.875em;
+}
+
+/* #Block Quotes
+================================================== */
+blockquote {
+  position: relative;
+  color: $color-grey60;
+  width: 70%;
+  //margin: 1em 7.5% .5em 7.5%;
+  //font-size: 1.5em; /* 24px / 16px = 1.5em */
+  //line-height: 1em;
+  //padding: 1em 7.5%;
+
+  //font-size: 1em; /* 24px / 16px = 1.5em */
+  //line-height: 1.5em;
+
+  font-size: 1.125em; /* 18px / 16px = 1.125em */
+  line-height: 1.333333333333334em;
+
+  margin: 1.333333333333334em 7.5%;
+  padding: 0 7.5%;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+blockquote.quotes {
+  //padding: 1.5em 4em 1em 4em;
+}
+
+blockquote.quotes:before,
+blockquote.quotes:after {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  display: block;
+  font-size: 3em;
+  position: absolute;
+  color: $color-grey15;
+}
+
+blockquote.quotes:before {
+  content: "\201C";
+  top: 0.2em;
+  left: -0.25em;
+}
+
+blockquote.quotes:after {
+  content: "\201D";
+  bottom: 0.25em;
+  right: -0.25em;
+}
+
+blockquote cite {
+  color: $color-grey40;
+  font-size: 0.75em;
+  display: block;
+  text-align: right;
+}
+
+blockquote cite:before {
+  content: "\2014 \2009";
+}
+
+blockquote.left {
+  //font-size: 1em;
+  //line-height: 1.5em;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    //font-size: 1em;
+    //line-height: 1.5em;
+    //margin: 0;
+    //padding: 0;
+  }
+  float: left;
+  margin: 0 1.5em 1.333333333333334em 0;
+  padding: 0 1.5em 0 0;
+  border-right: 4px solid $color-grey20;
+  text-align: left;
+}
+
+blockquote.right {
+  //font-size: 1em;
+  //line-height: 1.5em;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    //font-size: 1em;
+    //line-height: 1.5em;
+    //margin: 0;
+    //padding: 0;
+  }
+  float: right;
+  margin: 0 0 1.333333333333334em 1.5em;
+  padding: 0 0 0 1.5em;
+  border-left: 4px solid $color-grey20;
+}
+
+blockquote.left,
+blockquote.right {
+  width: 33.3333%;
+}
+
+/* #MEDIUM MEDIA QUERY
+==================================================
+================================================== */
+@media (min-width: 768px) {
+  blockquote {
+    width: 50%;
+    margin-right: 12.5%;
+    margin-left: 12.5%;
+    padding-right: 12.5%;
+    padding-left: 12.5%;
+  }
+
+  blockquote.quotes:before {
+    left: 5%;
+  }
+  blockquote.quotes:after {
+    right: 5%;
+  }
+
+  blockquote.left,
+  blockquote.right {
+    width: 33.3333%;
+  }
+}
+
+/* @FONT-FACE */
+
+/* */
+@font-face {
+  font-family: "nevis";
+  src: url("../fonts/Nevis/nevis-webfont.eot");
+  src: url("../fonts/Nevis/nevis-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Nevis/nevis-webfont.woff") format("woff"),
+    url("../fonts/Nevis/nevis-webfont.ttf") format("truetype"),
+    url("../fonts/Nevis/nevis-webfont.svg#montserratbold") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../fonts/OpenSans/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/OpenSans/OpenSans-Regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/OpenSans/OpenSans-Regular-webfont.woff") format("woff"),
+    url("../fonts/OpenSans/OpenSans-Regular-webfont.ttf") format("truetype"),
+    url("../fonts/OpenSans/OpenSans-Regular-webfont.svg#OpenSansRegular")
+      format("svg");
+}
+
+@font-face {
+  font-family: "OpenSansItalic";
+  src: url("../fonts/OpenSans/OpenSans-Italic-webfont.eot");
+  src: url("../fonts/OpenSans/OpenSans-Italic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/OpenSans/OpenSans-Italic-webfont.woff") format("woff"),
+    url("../fonts/OpenSans/OpenSans-Italic-webfont.ttf") format("truetype"),
+    url("../fonts/OpenSans/OpenSans-Italic-webfont.svg#OpenSansItalic")
+      format("svg");
+}
+
+@font-face {
+  font-family: "OpenSansLight";
+  src: url("../fonts/OpenSans/OpenSans-Light-webfont.eot");
+  src: url("../fonts/OpenSans/OpenSans-Light-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/OpenSans/OpenSans-Light-webfont.woff") format("woff"),
+    url("../fonts/OpenSans/OpenSans-Light-webfont.ttf") format("truetype"),
+    url("../fonts/OpenSans/OpenSans-Light-webfont.svg#OpenSansLight")
+      format("svg");
+}
+
+@font-face {
+  font-family: "OpenSansLightItalic";
+  src: url("../fonts/OpenSans/OpenSans-LightItalic-webfont.eot");
+  src: url("../fonts/OpenSans/OpenSans-LightItalic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/OpenSans/OpenSans-LightItalic-webfont.woff") format("woff"),
+    url("../fonts/OpenSans/OpenSans-LightItalic-webfont.ttf") format("truetype"),
+    url("../fonts/OpenSans/OpenSans-LightItalic-webfont.svg#OpenSansLightItalic")
+      format("svg");
+}
+
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../fonts/OpenSans/OpenSans-Bold-webfont.eot");
+  src: url("../fonts/OpenSans/OpenSans-Bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/OpenSans/OpenSans-Bold-webfont.woff") format("woff"),
+    url("../fonts/OpenSans/OpenSans-Bold-webfont.ttf") format("truetype"),
+    url("../fonts/OpenSans/OpenSans-Bold-webfont.svg#OpenSansBold")
+      format("svg");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../fonts/BebasNeue/BebasNeue-webfont.eot");
+  src: url("../fonts/BebasNeue/BebasNeue-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/BebasNeue/BebasNeue-webfont.woff") format("woff"),
+    url("../fonts/BebasNeue/BebasNeue-webfont.ttf") format("truetype"),
+    url("../fonts/BebasNeue/BebasNeue-webfont.svg#BebasRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Crimson";
+  src: url("../fonts/Crimson/crimson-roman-webfont.eot");
+  src: url("../fonts/Crimson/crimson-roman-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Crimson/crimson-roman-webfont.woff") format("woff"),
+    url("../fonts/Crimson/crimson-roman-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Crimson-bold";
+  src: url("../fonts/Crimson/crimson-bold-webfont.eot");
+  src: url("../fonts/Crimson/crimson-bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Crimson/crimson-bold-webfont.woff") format("woff"),
+    url("../fonts/Crimson/crimson-bold-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Crimson-italic";
+  src: url("../fonts/Crimson/crimson-italic-webfont.eot");
+  src: url("../fonts/Crimson/crimson-italic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Crimson/crimson-italic-webfont.woff") format("woff"),
+    url("../fonts/Crimson/crimson-italic-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Aleo-bold";
+  src: url("../fonts/Aleo/Aleo-Bold-webfont.eot");
+  src: url("../fonts/Aleo/Aleo-Bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Aleo/Aleo-Bold-webfont.woff") format("woff"),
+    url("../fonts/Aleo/Aleo-Bold-webfont.ttf") format("truetype"),
+    url("../fonts/Aleo/Aleo-Bold-webfont.svg#aleobold") format("svg");
+}
+
+@font-face {
+  font-family: "Aleo-light";
+  src: url("../fonts/Aleo/Aleo-Light-webfont.eot");
+  src: url("../fonts/Aleo/Aleo-Light-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Aleo/Aleo-Light-webfont.woff") format("woff"),
+    url("../fonts/Aleo/Aleo-Light-webfont.ttf") format("truetype"),
+    url("../fonts/Aleo/Aleo-Light -webfont.svg#aleobold") format("svg");
+}

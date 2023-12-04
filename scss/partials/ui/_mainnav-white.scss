@@ -1,0 +1,99 @@
+nav.white, nav.mean-nav {
+	text-align: center;
+	text-transform:uppercase;
+	font-family: Helvetica, Arial, sans-serif;
+	padding: 0 10px; /*to match the grid padding */
+}
+
+nav.white ul, nav.mean-nav ul {
+	list-style: none;
+	padding: .35em 0;
+	margin: 0;
+	border-top: 1px solid #dfdfdf;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+nav.white ul li, nav.mean-nav ul li {
+	display: inline-block;
+	border-left: 1px solid #f6f6f6;
+	white-space:nowrap;
+	padding: 0px 2em;
+}
+
+nav.white ul li:first-child {
+	border-left: none;
+}
+
+nav.white ul li a, nav.mean-nav ul li a {
+	text-align: left;
+	display: inline-block;
+	color: #666;
+	padding: .5em 1em;
+	text-decoration: none;
+	font-size: 1em;
+	line-height: 1.3em;
+	font-weight: bold;
+}
+
+nav.white ul li a small, nav.mean-nav ul li a small {
+	display: block;
+	text-transform: capitalize;
+	font-size: .625em;
+	line-height: .625em;
+	font-weight: normal;
+	color: #aaa;
+}
+
+nav.white ul li a:hover, nav.mean-nav ul li a:hover {
+	color: #39c;
+}
+
+nav.white ul li a:hover small, , nav.mean-nav ul li a:hover small {
+	color: #ccc;
+}
+
+/* MEDIA QUERIES
+===================================== */
+@media only screen and (max-width: 767px) {
+	
+	nav.white, nav.mean-nav {
+		padding: 0; /*to match the grid padding */
+		text-align: left;
+		margin: 0;
+	}
+	
+	nav.white ul, nav.mean-nav ul {
+		clear:both;
+		float:none;
+		position:static;
+		right: auto;
+		border: none;
+	}
+	nav.white ul li, nav.mean-nav ul li {
+		display: block;
+		clear:both;
+		float:none;
+		position:static;
+		left: auto;
+		margin: 0;
+		padding: 0;
+	}
+	nav.white ul li a, nav.mean-nav ul li a {
+		border: none;
+		text-shadow:none;
+		width: 88%;
+		margin: 0 2%;
+		padding: 1em 4%;
+	}
+	nav.white ul li a:hover, nav.mean-nav ul li a:hover {
+		color: #39c;
+		background: #eee;
+	}
+	nav.white ul li a {
+		border-top: 1px solid #ddd;
+	}
+	nav.white ul li a small, nav.mean-nav ul li a small {
+		clear: both;
+	}
+		
+}

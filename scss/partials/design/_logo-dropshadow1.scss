@@ -1,0 +1,42 @@
+/* LOGO TREATMENT
+===================================== */
+
+header .logo {
+	text-align: center;
+	padding: 20px 0;
+}
+
+header .logo h1 {
+	margin: .5em auto 0 auto;
+	font-size: 2em;
+	font-family: "VarelaRegular";
+	white-space: nowrap;
+}
+
+header .logo h1 a {
+	/* text-shadow: h-shadow v-shadow blur color;*/
+	text-shadow: 2px 2px 0px #fff, 3px 3px 0px rgba(0,0,0,0.35);
+	text-transform:uppercase;
+	color: #333;
+	text-decoration: none;
+    border-bottom: 1px solid #dfdfdf;
+    border-top: 1px solid #dfdfdf;
+	padding: .2em 0 .4em 0;
+}
+
+
+header .logo p.tagline {
+	display: inline-block;
+	font-family: "MuseoSans500"; 
+	text-align: center;
+	font-size: .6em;
+	line-height: 1em;
+	text-transform:uppercase;
+	background-color: #fff;
+	position: relative;
+	top: .3em;
+	padding: 0 1em;
+	color: #999;
+	margin: 0 0 3em 0;
+	white-space: nowrap;
+}
